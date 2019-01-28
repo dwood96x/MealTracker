@@ -12,5 +12,10 @@ namespace MealTracker.Controllers
         {
             return View();
         }
+        
+        public ActionResult MealList()
+        {
+            return View();
+        }
     }
 }

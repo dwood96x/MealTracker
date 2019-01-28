@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MealTracker.Models.Meal>
+
+@{
+    ViewBag.Title = "MealList";
+}
+
+<h2>MealList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mealname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalcost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.servings)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.userID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mealname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalcost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.servings)
+        </td>
+        @*
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.mealID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.mealID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.mealID })
+        </td>
+         *@
+    </tr>
+}
+
+</table>
