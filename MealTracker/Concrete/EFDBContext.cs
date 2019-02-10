@@ -7,10 +7,10 @@ using System.Web;
 
 namespace MealTracker.Concrete
 {
-    public class MTDBContext : DbContext
+    public class EFDBContext : DbContext
     {
-        public MTDBContext()
-            : base("name=MTDBContext")
+        public EFDBContext()
+            : base("name=EFDBContext")
         {
         }
 
