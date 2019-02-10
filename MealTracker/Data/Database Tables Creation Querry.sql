@@ -1,3 +1,5 @@
+CREATE DATABASE MealTracker
+
 Use MealTracker;
 
 DROP TABLE IF EXISTS Ingredients, Meals, Users;
