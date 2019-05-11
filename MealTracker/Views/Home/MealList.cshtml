@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MealTracker.Models.Meal>
+﻿@model MealTracker.Models.MealListViewModel
 
 @{
     ViewBag.Title = "MealList";
@@ -7,29 +7,15 @@
 <h2>MealList</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a Meal", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.userID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.mealname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.totalcost)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.servings)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
+<table class="table">
+
+@foreach (var item in Model.Meals) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.userID)
+            @Html.DisplayFor(modelItem => item.mealID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.mealname)
@@ -49,5 +35,12 @@
          *@
     </tr>
 }
-
 </table>
+
+@foreach (var item in Model.Meals)
+{
+    <div class="well">
+        <strong>@item.mealname</strong>
+        <span class="pull-right label label-primary">@item.totalcost</span>
+    </div>
+}

@@ -10,7 +10,7 @@ namespace MealTracker.Concrete
     public class EFDBContext : DbContext
     {
         public EFDBContext()
-            : base("name=EFDBContext")
+            : base("name=EFDbContext")
         {
         }
 

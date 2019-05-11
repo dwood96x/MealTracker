@@ -14,7 +14,8 @@ namespace MealTracker.Models
         public string mealname { get; set; }
 
         [Display(Name = "Total Cost: ")]
-        public short totalcost { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal totalcost { get; set; }
 
         [Display(Name = "Servings: ")]
         public int servings { get; set; }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MealTracker.Concrete;
+using MealTracker.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +14,18 @@ namespace MealTracker.Controllers
         {
             return View();
         }
-        
-        public ActionResult MealList()
+
+        public ViewResult MealList()
         {
-            return View();
+            EFDBContext context = new EFDBContext();
+
+            MealListViewModel model = new MealListViewModel
+            {
+                Meals = context.Meals
+                .OrderBy(m => m.mealID)
+            };
+            return View(model);
+
         }
     }
 }
