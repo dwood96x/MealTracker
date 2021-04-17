@@ -11,11 +11,11 @@ namespace MealTracker.Models
 
         [Required(ErrorMessage = "Name for the meal is required")]
         [Display(Name = "Meal name: ")]
-        public string mealname { get; set; }
+        public string mealName { get; set; }
 
         [Display(Name = "Total Cost: ")]
         [DataType(DataType.Currency)]
-        public decimal totalcost { get; set; }
+        public decimal totalCost { get; set; }
 
         [Display(Name = "Servings: ")]
         public int servings { get; set; }

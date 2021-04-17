@@ -18,10 +18,10 @@
             @Html.DisplayFor(modelItem => item.mealID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.mealname)
+            @Html.DisplayFor(modelItem => item.mealName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.totalcost)
+            @Html.DisplayFor(modelItem => item.totalCost)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.servings)
@@ -40,7 +40,7 @@
 @foreach (var item in Model.Meals)
 {
     <div class="well">
-        <strong>@item.mealname</strong>
-        <span class="pull-right label label-primary">@item.totalcost</span>
+        <strong>@item.mealName</strong>
+        <span class="pull-right label label-primary">@item.totalCost</span>
     </div>
 }
